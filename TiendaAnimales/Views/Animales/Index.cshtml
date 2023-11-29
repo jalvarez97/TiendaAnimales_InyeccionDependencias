@@ -1,0 +1,17 @@
+﻿@model List<Animal>
+
+<ul>
+    <h1>@ViewBag.Mensaje</h1>
+    
+    @foreach (Animal animal in Model)
+    {
+        <li>Id: @animal.IdAnimal 
+            Nombre: @animal.NombreAnimal 
+            Raza: @animal.Raza 
+            RIdTipoAnimal: @animal.RIdTipoAnimal 
+            Fecha de nacimiento:@(animal.FechaNacimiento.HasValue ? animal.FechaNacimiento.Value.ToString("dd/MM/yyyy") : "Sin fecha") 
+        </li>       
+    }
+
+    <h1>@ViewBag.EjemploBlabla</h1>
+</ul>
